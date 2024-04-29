@@ -30,7 +30,7 @@ fn fib_rs(num: usize) -> PyResult<usize> {
 /// # Returns
 /// * `PyResult<()>` - Indicates successful module initialization or an error during setup.
 #[pymodule]
-fn fibonacci(_py: Python, m: &PyModule) -> PyResult<()> {
+fn rust_implementations(_py: Python, m: &PyModule) -> PyResult<()> {
     // Add the `fib_rs` function to the module.
     m.add_function(wrap_pyfunction!(fib_rs, m)?)?;
     Ok(())
